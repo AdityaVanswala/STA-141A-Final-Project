@@ -7535,7 +7535,7 @@ a.anchor-link {
         display: none;
     }
 </style>
-<h1 id="Title"><div align="Center"><u>Using Neurological Data to Predict Mouse Behavior</u></div><a class="anchor-link" href="#Title">¶</a></h1><h3 id="-Author:-Aditya-Vanswala-"><div align="center"> Author: Aditya Vanswala </div><a class="anchor-link" href="#-Author:-Aditya-Vanswala-">¶</a></h3><h4 id="-Date:-March-17,-2025-"><div align="center"> Date: March 11, 2025 </div><a class="anchor-link" href="#-Date:-March-11,-2025-">¶</a></h4><hr/>
+<h1 id="Title"><div align="Center"><u>Using Neurological Data to Predict Mouse Behavior</u></div><a class="anchor-link" href="#Title">¶</a></h1><h3 id="-Author:-Aditya-Vanswala-"><div align="center"> Author: Aditya Vanswala </div><a class="anchor-link" href="#-Author:-Aditya-Vanswala-">¶</a></h3><h4 id="-Date:-March-17,-2025-"><div align="center"> Date: March 17, 2025 </div><a class="anchor-link" href="#-Date:-March-11,-2025-">¶</a></h4><hr/>
 <h2 id="-Table-of-Contents-"><div align="center"><u> Table of Contents </u></div><a class="anchor-link" href="#-Table-of-Contents-">¶</a></h2><ul>
 <li> <a href="#Abstract">Abstract </a> </li>
 <li> <a href="#Introduction">Introduction </a> </li>
@@ -7784,7 +7784,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p>Making a table to compare the different sessions, we can see that Lederberg has the best success rate, being the only mice to pass the 80% success rate. Lederberg also has some of the lowest average number of spikes. Cori appears to be the worst being the only mice not to pass the 70% success rate, while also havine some of the highest average number of spikes. In order to make the differences between the different mice's clearer, we will group the sessions together by mouse to hopefully see if the mice's have some similarites between them that we can use in our final model.</p>
+<p>Making a table to compare the different sessions, we can see that Lederberg has the best success rate, being the only mice to pass the 80% success rate. Lederberg also has some of the lowest average number of spikes. Cori appears to be the worst being the only mice not to pass the 70% success rate, while also having some of the highest average number of spikes. In order to make the differences between the different mice's clearer, we will group the sessions together by mouse to hopefully see if the mice's have some similarites between them that we can use in our final model.</p>
 </blockquote>
 </div>
 </div>
@@ -7872,7 +7872,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p>By combining the data between session for each mouse, we can confirm that the best mouse was Lederberg an the worst was Cori. One other observation we can make is that the two worst mice, Cori and Hench, have higher average number of neuron spikes than the other two mice, Lederberg and Forssmann, who have higher success rates. This suggests a negative relationship between the average number of spikes and the success rate. In order to visualize this pattern, we will make a scatter plot between the success rate and the average number of neuron spikes.</p>
+<p>By combining the data between session for each mouse, we can confirm that the best mouse was Lederberg and the worst was Cori. One other observation we can make is that the two worst mice, Cori and Hench, have higher average number of neuron spikes than the other two mice, Lederberg and Forssmann, who have higher success rates. This suggests a negative relationship between the average number of spikes and the success rate. In order to visualize this pattern, we will make a scatter plot between the success rate and the average number of neuron spikes.</p>
 </blockquote>
 </div>
 </div>
@@ -7927,7 +7927,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p>We can observe from the plot above that the average number of spikes only seems to go down if the outcome is a fail. If the outcome is a success, the average number of spikes seems to be constant or increasing over time. We can try to include this pattern into our final model by including the average number of spikes for ever time bin as a predictor for the outcome, however because some success and unsuccessful trials have a roughly constant average number of spikes, the impact may not be significant. To dig deeper into this relationship, we can also create a histogram of the average number of spikes for successful and unsuccessful trials for each mouse to check if the distribution of the average number of spikes is different for the outcomes.</p>
+<p>We can observe from the plot above that the average number of spikes only seems to go down if the outcome is a fail. If the outcome is a success, the average number of spikes seems to be constant or increasing over time. We can try to include this pattern into our final model by including the average number of spikes for every time bin as a predictor for the outcome, however because some successful and unsuccessful trials have a roughly constant average number of spikes, the impact may not be significant. To dig deeper into this relationship, we can also create a histogram of the average number of spikes for successful and unsuccessful trials for each mouse. We do this to check if the distribution of the average number of spikes is different for the outcomes.</p>
 </blockquote>
 </div>
 </div>
@@ -8031,7 +8031,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p>For all mice, there seems to be a positive relationship between the success rate and the difference in the left and right contrasts. This is to be expected because we can intuitively understand that the mice would perform better when the contrasts are the furthest apart. We can try to capture this relationship by adding a variable for the difference in contrasts. At this point, the model is fairly complex, so we can try to use Principle Component Analysis to hopefully reduce the number of predictors while trying to explain as much variance of the responce variable as possible.</p>
+<p>For all mice, there seems to be a positive relationship between the success rate and the difference in the left and right contrasts. This is to be expected because we can intuitively understand that the mice would perform better when the contrasts are the furthest apart. We can try to capture this relationship by adding a variable for the difference in contrasts. At this point, the model is fairly complex, so we can try to use Principle Component Analysis to hopefully reduce the number of predictors while trying to explain as much variance of the response variable as possible.</p>
 </blockquote>
 </div>
 </div>
@@ -8046,7 +8046,7 @@ a.anchor-link {
 <hr/>
 <h2><div align="center" id="Data Integration"> <u>Data Integration</u> </div></h2>
 <blockquote>
-<p>To create a prediction model, we will create a table of our predictors for every trial in every session together. Even though the mice have different neuron activity, we combine all results for every session because we would have significantly more trials to include into our model. The predictors of our model are the session number (treated as a categorical variable), trial number, left and right contrast, the difference in the contrast (treated as a categorical variable), the average number of spikes for each time bin, and a variable that is 1 if the two contrasts are equal, but non-zero to account for the case when the mouse has a 50% chance of success or failure when moving the wheel in either direction. For session 1 and 18, because 100 trials were randomly removed to be the test data, we will spread out the trial number to account for the removed data. To find the best model, we will split the data into 2, 80% will be used to train the data, and the other 20% will be used to test our models and pick the best one.</p>
+<p>To create a prediction model, we will create a table of our predictors for every trial in every session together. Even though the mice have different neuron activity, we combine all results for every session because we would have significantly more trials to include into our model. The predictors of our model are the session number (treated as a categorical variable), trial number, left and right contrast, the difference in the contrast (treated as a categorical variable), the average number of spikes for each time bin, and a variable that is 1 if the two contrasts are equal, but non-zero to account for the case when the mouse has a 50% chance of success or failure when moving the wheel in either direction. For sessions 1 and 18, because 100 trials were randomly removed to be the test data, we will spread out the trial number to account for the removed data. To find the best model, we will split the data into two, 80% will be used to train the data, and the other 20% will be used to test our models and pick the best one.</p>
 </blockquote>
 <blockquote>
 <p>To reduce the complexity of the model, we can try to use PCA to reduce the number of predictors in our model. To see the number of principle components we would need for the model, we can plot the explained variance of each component.</p>
@@ -8101,7 +8101,7 @@ a.anchor-link {
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
 <blockquote>
-<p>Because the successful and failed trials are overlapping significantly, PCA is not a good option for this data set. We will continue to use the 65 variables we had previously by integrating all of the data from every session together.</p>
+<p>Because the successful and unsuccessful trials are overlapping significantly, PCA is not a good option for this data set. We will continue to use the 65 variables we had previously by integrating all of the data from every session together.</p>
 </blockquote>
 </div>
 </div>
@@ -8119,7 +8119,7 @@ a.anchor-link {
 <p>To create a prediction model using the training data, we will use the sklearn library to create 2 models. One using logistic regression with L1 regularization (Lasso) and the other using linear discriminant analysis. We will also be using XGBoost to create a model. Once we have our models, we will use them to predict the other 20% of our data that we reserved to pick the best model.</p>
 </blockquote>
 <blockquote>
-<p>The logistic regression works by computing the cost function (Log Loss) and adding the L1 regularization term to penalize large coefficients. By optimizing the function while shinking some coefficients to zero, the final model will only include the important features, reducing the overall complexity.</p>
+<p>The logistic regression works by computing the cost function (Log Loss) and adding the L1 regularization term to penalize large coefficients. By optimizing the function while shrinking some coefficients to zero, the final model will only include the important features, reducing the overall complexity.</p>
 </blockquote>
 <blockquote>
 <p>Linear discriminant analysis works by finding the direction that best seperates the success trials from the unsuccessful trials. This is similar to PCA, but PCA focuses on the direction of maximum variance. This method often reduces dimensions which can help reduce the complexity of a model; however, this method works best for data that have a clear seperation between each class. Our data does not appear to have a clear seperation, so we expect this model to perform the worst.</p>
